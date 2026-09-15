@@ -37,17 +37,23 @@ export default function Home() {
   return (
     <main className={`${styles.home} ${circular.variable}`}>
       <header className={styles.header} id="top">
-        <div className={styles.profile}>
-          <div className={styles.avatar}>
-            <Image src={`${assets}/profile.png`} alt="Vijay Saiwal" width={106} height={106} preload sizes="106px" />
-          </div>
-          <div className={styles.identity}>
-            <div className={styles.name}>
-              <span>Vijay Saiwal</span>
-              <Image src={`${assets}/verified.svg`} alt="Verified" width={16} height={16} />
+        <div className={styles.brandRow}>
+          <div className={styles.profile}>
+            <div className={styles.avatar}>
+              <Image src={`${assets}/profile.png`} alt="Vijay Saiwal" width={106} height={106} preload sizes="106px" />
             </div>
-            <span className={styles.availability}>Available for work</span>
+            <div className={styles.identity}>
+              <div className={styles.name}>
+                <span>Vijay Saiwal</span>
+                <Image src={`${assets}/verified.svg`} alt="Verified" width={16} height={16} />
+              </div>
+              <span className={styles.availability}>Available for work</span>
+            </div>
           </div>
+
+          <a className={styles.brandLogo} href="/" aria-label="Vijay Saiwal home">
+            <Image src="/assets/Logo.png" alt="Vijay Saiwal logo" width={48} height={48} />
+          </a>
         </div>
 
         <div className={styles.introduction}>

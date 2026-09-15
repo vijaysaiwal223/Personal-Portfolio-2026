@@ -17,6 +17,8 @@
 .home a:focus-visible { outline: 2px solid #2b4eff; outline-offset: 4px; }
 .header, .about, .experience { width: min(800px, 100%); }
 .header { display: flex; flex-direction: column; gap: 40px; }
+.brandRow { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; }
+.brandLogo { display: block; flex-shrink: 0; overflow: hidden; border-radius: 12px; background: #000; }
 .profile { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
 .avatar { position: relative; width: 64px; height: 64px; overflow: hidden; border-radius: 50%; }
 .avatar img { position: absolute; width: 164.58%; height: 164.58%; max-width: none; left: 0; top: -33.33%; }
