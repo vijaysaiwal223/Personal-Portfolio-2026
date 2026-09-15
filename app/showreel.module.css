@@ -1,0 +1,9 @@
+.showreel { width: min(800px, 100%); margin: 0; display: flex; flex-direction: column; align-items: center; gap: 12px; scroll-margin-top: 24px; }
+.player { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid #e4e4e7; border-radius: 12px; background: #f2f4f5; }
+.player video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.poster { position: absolute; inset: 0; background: url('/assets/portfolio/design-reference.png') 50% 36.3248% / 160% 516% no-repeat; }
+.showreel figcaption { color: var(--muted); font-size: 14px; line-height: 20px; letter-spacing: -.16px; }
+.playbackButton { position: absolute; right: 12px; bottom: 12px; min-height: 36px; padding: 6px 14px; border: 1px solid rgb(255 255 255 / 30%); border-radius: 999px; background: rgb(24 24 27 / 85%); color: #fff; font: inherit; font-size: 12px; line-height: 20px; cursor: pointer; opacity: 0; transition: opacity 160ms ease; }
+.player:hover .playbackButton, .player:focus-within .playbackButton { opacity: 1; }
+.playbackButton:focus-visible { outline: 2px solid #2b4eff; outline-offset: 3px; }
+@media (hover: none), (prefers-reduced-motion: reduce) { .playbackButton { opacity: 1; transition: none; } }
