@@ -221,7 +221,7 @@ export default function DocDock({ active }: { active: "home" | "projects" | "abo
   return (
     <>
       <nav className="fixed bottom-6 left-1/2 z-50 flex -translate-x-1/2 max-[560px]:bottom-4" aria-label="Doc navigation">
-        <div className="flex max-w-[calc(100vw-32px)] items-center gap-3 overflow-x-auto rounded-full bg-black/10 p-2 shadow-[0_10px_30px_rgb(24_24_27_/_10%)] backdrop-blur-[2px]">
+        <div className="flex max-w-[calc(100vw-32px)] items-center gap-3 overflow-x-auto rounded-full bg-black/20 p-2 shadow-[0_10px_30px_rgb(24_24_27_/_10%)] backdrop-blur-[2px]">
           {dockItems.map((item, index) => {
             if (item.variant === "separator") {
               return (

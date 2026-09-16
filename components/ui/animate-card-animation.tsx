@@ -46,19 +46,19 @@ const initialCards: Card[] = [
 ];
 
 const positionStyles = [
-  { scale: 1, y: 12 },
-  { scale: 0.95, y: -16 },
-  { scale: 0.9, y: -44 },
+  { scale: 1, y: 8 },
+  { scale: 0.95, y: -32 },
+  { scale: 0.9, y: -72 },
 ];
 
 const exitAnimation = {
-  y: 340,
+  y: 520,
   scale: 1,
   zIndex: 10,
 };
 
 const enterAnimation = {
-  y: -16,
+  y: -72,
   scale: 0.9,
 };
 
@@ -66,16 +66,16 @@ function CardContent({ contentType }: { contentType: ContentType }) {
   const data = projectContent[contentType];
 
   return (
-    <div className="flex h-full w-full flex-col gap-4">
+    <div className="flex h-full w-full flex-col gap-5">
       <div className="flex aspect-[5/2] w-full items-center justify-center overflow-hidden rounded-xl outline outline-1 -outline-offset-1 outline-black/10">
         <img className="h-full w-full select-none object-cover" src={data.image} alt={data.title} draggable={false} />
       </div>
-      <div className="flex w-full items-center justify-between gap-3 px-3 pb-6">
+      <div className="flex w-full items-center justify-between gap-4 px-5 pb-7 max-[560px]:px-3 max-[560px]:pb-5">
         <div className="flex min-w-0 flex-1 flex-col">
-          <span className="truncate font-[Youth,sans-serif] text-base leading-6 font-medium tracking-[-0.32px] text-[#18181b]">{data.title}</span>
-          <span className="font-[var(--font-circular)] text-sm leading-5 tracking-[-0.16px] text-[#71717a]">{data.description}</span>
+          <span className="truncate font-[Youth,sans-serif] text-xl leading-7 font-medium tracking-[-0.4px] text-[#18181b] max-[560px]:text-base max-[560px]:leading-6">{data.title}</span>
+          <span className="font-[var(--font-circular)] text-base leading-6 tracking-[-0.16px] text-[#71717a] max-[560px]:text-sm max-[560px]:leading-5">{data.description}</span>
         </div>
-        <button className="flex h-10 shrink-0 cursor-pointer select-none items-center gap-0.5 rounded-full bg-[#18181b] py-0 pr-3 pl-4 font-[var(--font-circular)] text-sm font-medium text-white transition-colors hover:bg-black" type="button">
+        <button className="flex h-12 shrink-0 cursor-pointer select-none items-center gap-1 rounded-full bg-[#050505] py-0 pr-4 pl-5 font-[var(--font-circular)] text-base font-semibold text-white transition-colors hover:bg-black max-[560px]:h-10 max-[560px]:px-4 max-[560px]:text-sm" type="button">
           Read
           <svg
             aria-hidden="true"
@@ -111,7 +111,7 @@ function AnimatedCard({
   return (
     <motion.div
       animate={{ y, scale }}
-      className="absolute flex h-[280px] w-[324px] items-center justify-center overflow-hidden rounded-t-xl border-x border-t border-[#e4e4e7] bg-white p-1 shadow-lg will-change-transform sm:w-[512px]"
+      className="absolute flex h-[420px] w-[324px] items-center justify-center overflow-hidden rounded-t-xl border-x border-t border-[#e4e4e7] bg-white p-1 shadow-lg will-change-transform sm:w-[800px] max-[860px]:w-[calc(100vw-48px)]"
       exit={exitAnim}
       initial={initialAnim}
       key={card.id}
@@ -149,8 +149,8 @@ export default function AnimatedCardStack() {
   };
 
   return (
-    <div className="flex w-full flex-col items-center justify-center overflow-hidden rounded-xl border border-[#e4e4e7] bg-[#fafafa] pt-2 shadow-[0_1px_2px_rgb(24_24_27_/_4%)]">
-      <div className="relative h-[380px] w-full overflow-hidden sm:w-[644px]">
+    <div className="flex w-screen flex-col items-center justify-center overflow-hidden bg-white pt-12 max-[560px]:pt-8">
+      <div className="relative h-[460px] w-full overflow-visible sm:w-[932px] max-[980px]:w-full">
         <AnimatePresence initial={false}>
           {cards.slice(0, 3).map((card, index) => (
             <AnimatedCard card={card} index={index} isAnimating={isAnimating} key={card.id} />
@@ -158,9 +158,9 @@ export default function AnimatedCardStack() {
         </AnimatePresence>
       </div>
 
-      <div className="relative z-10 -mt-px flex w-full items-center justify-center border-t border-[#e4e4e7] bg-white py-4">
+      <div className="relative z-10 -mt-px flex w-full items-center justify-center border-t border-[#e4e4e7] bg-white py-7 max-[560px]:py-5">
         <button
-          className="flex h-9 cursor-pointer select-none items-center justify-center gap-1 overflow-hidden rounded-lg border border-[#e4e4e7] bg-white px-3 font-[var(--font-circular)] text-sm font-medium text-[#27272a] transition-all hover:bg-[#f4f4f5] active:scale-[0.98]"
+          className="flex h-10 cursor-pointer select-none items-center justify-center gap-1 overflow-hidden rounded-xl border border-[#e4e4e7] bg-white px-4 font-[var(--font-circular)] text-base  text-[#27272a] transition-all hover:bg-[#f4f4f5] active:scale-[0.98]"
           onClick={handleAnimate}
           type="button"
         >

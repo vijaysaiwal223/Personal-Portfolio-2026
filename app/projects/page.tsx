@@ -1,5 +1,5 @@
 import DocDock from "../DocDock";
-import { PageShell, ProjectsSection } from "../PortfolioShared";
+import { DesignSnapshot, PageShell, ProjectsSection } from "../PortfolioShared";
 
 export const metadata = {
   title: "Projects",
@@ -17,6 +17,7 @@ export default function ProjectsPage() {
         </p>
       </div>
       <ProjectsSection />
+      <DesignSnapshot />
     </PageShell>
   );
 }

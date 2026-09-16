@@ -84,8 +84,25 @@ export function SectionHeading({ title, count, id }: { title: string; count?: st
 
 export function ProjectsSection() {
   return (
-    <section className="flex w-[min(800px,100%)] flex-col gap-3" aria-label="Projects">
+    <section className="w-screen" aria-label="Projects">
       <AnimatedCardStack />
+    </section>
+  );
+}
+
+export function DesignSnapshot() {
+  const snapshots = [1, 2, 3, 4, 5].map((number) => ({
+    src: `${assets}/design-snapshot/${number}.png`,
+    alt: `Design snapshot ${number}`,
+  }));
+
+  return (
+    <section className="grid w-full grid-cols-3 gap-4 px-20 max-[1100px]:grid-cols-2 max-[760px]:px-6 max-[640px]:grid-cols-1 max-[560px]:px-5" aria-label="Design snapshot">
+      {snapshots.map((snapshot) => (
+        <div className="relative aspect-[592/444] overflow-hidden rounded-xl border border-solid border-[#e4e4e7] bg-white" key={snapshot.src}>
+          <Image className="object-cover" src={snapshot.src} alt={snapshot.alt} fill sizes="(max-width: 900px) calc(100vw - 48px), 592px" />
+        </div>
+      ))}
     </section>
   );
 }

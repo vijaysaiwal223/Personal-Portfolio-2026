@@ -81,9 +81,9 @@ export default function Home() {
             <span className="inline-flex items-center gap-[3px] text-[10px] leading-3 text-[#a7a7a7]">
               Powered by <Image className="block shrink-0" src={`${assets}/cal-logo.svg`} alt="Cal.com" width={38} height={8} />
             </span>
-            <a className="inline-flex items-center justify-center gap-[7px] rounded-[60px] bg-[#2b4fff] py-0 pr-1.5 pl-2.5 text-sm leading-[25px] font-semibold text-white no-underline shadow-[0_1px_2px_rgb(43_79_255_/_22%)] transition-colors duration-200 hover:bg-[#1938d8] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#2b4eff] motion-reduce:transition-none" href="https://cal.com/vijay-saiwal/30min" target="_blank" rel="noreferrer">
+            <a className="inline-flex items-center justify-center gap-[7px] rounded-[60px] bg-[#2b4fff] py-0 pr-2 pl-3 text-sm leading-[32px] font-regular text-white no-underline  transition-colors duration-200 hover:bg-[#1938d8] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#2b4eff] motion-reduce:transition-none" href="https://cal.com/vijay-saiwal/30min" target="_blank" rel="noreferrer">
               <span className="text-white">Chat with us</span>
-              <Image className="block shrink-0" src={`${assets}/chat-arrow.svg`} alt="" width={12} height={12} />
+              <Image className="block shrink-0" src={`${assets}/chat-arrow.svg`} alt="" width={20} height={20} />
             </a>
           </div>
         </div>
