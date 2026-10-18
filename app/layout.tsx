@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { site, siteUrl } from "./site";
+import { links, site, siteUrl } from "@/lib/site";
+import { circular } from "@/lib/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
   title: { default: site.title, template: "%s | Vijay Saiwal" },
   description: site.description,
   applicationName: "Vijay Saiwal’s Portfolio",
-  authors: [{ name: site.name, url: site.linkedIn }],
+  authors: [{ name: site.name, url: links.linkedIn }],
   creator: site.name,
   publisher: site.name,
   ...(siteUrl ? { alternates: { canonical: "/" } } : {}),
@@ -39,7 +40,7 @@ export const viewport: Viewport = { themeColor: "#ffffff", colorScheme: "light" 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <body className={`${circular.variable} ${circular.className} antialiased`}>
         {siteUrl && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ProfilePage",
@@ -55,7 +56,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             url: siteUrl,
             jobTitle: "Product Designer",
             image: `${siteUrl}/assets/portfolio/profile.png`,
-            sameAs: [site.linkedIn],
+            sameAs: [links.linkedIn],
           },
         }).replace(/</g, "\\u003c") }} />}
         {children}
