@@ -28,13 +28,9 @@ export default function HomeSelectedWork() {
           Selected projects, carefully crafted.
         </h2>
         <div className="flex w-full flex-wrap items-start gap-x-10 gap-y-16 overflow-visible pb-2">
-          {selectedProjects.map((project) => (
-          <Link
-            aria-label={`View ${project.title} case study`}
-            className="relative flex w-40 shrink-0 cursor-pointer flex-col gap-4 border-0 bg-transparent p-0 text-left no-underline focus-visible:rounded-[18px] focus-visible:outline-2 focus-visible:outline-offset-[7px] focus-visible:outline-white"
-            href={`/projects/${project.slug}`}
-            key={project.title}
-          >
+          {selectedProjects.map((project) => {
+            const cardClassName = "relative flex w-40 shrink-0 flex-col gap-4 border-0 bg-transparent p-0 text-left no-underline";
+            const cardContent = <>
             <div className={`relative flex h-52 w-40 items-center justify-center rounded-[18px] ${project.title === "Design System" || project.title === "Whoflex" ? "shadow-[0_0_0_3px_#121213,0_0_0_6px_#2a2a2c]" : "shadow-[0_0_0_3px_#040404,0_0_0_6px_#2a2a2c]"} ${project.title === "Design System" ? "bg-white" : "bg-[#f9f9f9]"}`}>
               {project.title === "Design System" && (
                 <Image
@@ -141,8 +137,24 @@ export default function HomeSelectedWork() {
               <span className="text-[16px] leading-[19.2px] font-medium text-white">{project.title}</span>
               <span className="text-[14px] leading-[16.8px] font-normal text-[#757575]">{project.category}</span>
             </span>
-          </Link>
-          ))}
+            </>;
+
+            return project.title === "Design System" ? (
+              <div className={`${cardClassName} cursor-wait`} key={project.title} title="Work in progress">
+                {cardContent}
+                <span className="sr-only">Work in progress</span>
+              </div>
+            ) : (
+              <Link
+                aria-label={`View ${project.title} case study`}
+                className={`${cardClassName} cursor-pointer focus-visible:rounded-[18px] focus-visible:outline-2 focus-visible:outline-offset-[7px] focus-visible:outline-white`}
+                href={`/projects/${project.slug}`}
+                key={project.title}
+              >
+                {cardContent}
+              </Link>
+            );
+          })}
         </div>
         <div className="relative flex w-full items-start" role="note">
           <span className="relative h-[30px] w-5 shrink-0 overflow-hidden" aria-hidden="true">

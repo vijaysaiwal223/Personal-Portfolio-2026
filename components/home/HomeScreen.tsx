@@ -3,6 +3,7 @@ import HomeHero from "./HomeHero";
 import HomeIsland from "./HomeIsland";
 import HomeSelectedWork from "./HomeSelectedWork";
 import HomeTestimonials from "./HomeTestimonials";
+import HomeWebsiteBuilds from "./HomeWebsiteBuilds";
 import HomeTimeLocation from "./HomeTimeLocation";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -18,6 +19,7 @@ export default function HomeScreen() {
             <HomeAvailabilityBadge />
             <HomeSelectedWork />
             <HomeTestimonials />
+            <HomeWebsiteBuilds />
           </div>
           <SiteFooter />
         </div>

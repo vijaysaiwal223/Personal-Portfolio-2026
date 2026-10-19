@@ -65,6 +65,14 @@ body { margin:0; background:#fbf9f0; color:#000; font-family:var(--font-circular
 .home-brand-marquee:focus-within .home-brand-marquee-track,
 .home-brand-section:has(.home-brand-marquee:hover) .home-brand-progress,
 .home-brand-section:has(.home-brand-marquee:focus-within) .home-brand-progress { animation-play-state:paused; }
+.website-tabs { scrollbar-width:none; }
+.website-tabs::-webkit-scrollbar { display:none; }
+@keyframes website-tab-progress {
+  to { stroke-dashoffset:0; }
+}
+.website-tab-progress { animation:website-tab-progress 8s linear forwards; }
+#website-builds[data-paused="true"] .website-tab-progress { animation-play-state:paused; }
+.website-tool-icon { position:relative; transform-origin:center bottom; will-change:transform; }
 @keyframes home-availability-breathe {
   0%,100% { transform:scale(.9); opacity:.8; }
   50% { transform:scale(1.12); opacity:1; }
