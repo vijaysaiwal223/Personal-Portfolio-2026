@@ -71,7 +71,7 @@ export default async function ProjectCaseStudyPage({ params }: PageProps) {
           </Link>
         </div>
         <div className="h-full overflow-y-auto overscroll-contain">
-          <div className="min-h-full rounded-b-2xl bg-[#121213]">
+          <div className="min-h-full overflow-hidden rounded-b-2xl bg-[#121213]">
             {isSocialListening ? <SocialListeningCaseStudy /> : isWhoflex ? <WhoflexCaseStudy /> : isTrellis ? <TrellisCaseStudy /> : <ProjectPreview project={project} />}
           </div>
           <SiteFooter />
