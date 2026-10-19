@@ -235,23 +235,15 @@ export default function TrellisCaseStudy() {
 
       <div id="trellis-gallery" className="mt-24 grid scroll-mt-28 grid-cols-2 gap-4 px-6 max-[760px]:mt-16 max-[760px]:grid-cols-1" aria-label="Trellis interface gallery">
         {caseStudyImages.map(({ file, alt }) => (
-          <a
+          <Image
             key={file}
-            href={`${imageRoot}/${file}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`Open full-size image: ${alt}`}
-            className="block rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-          >
-            <Image
-              src={`${imageRoot}/${file}`}
-              alt={alt}
-              width={1920}
-              height={1080}
-              sizes="(max-width: 760px) calc(100vw - 56px), calc((100vw - 64px) / 2)"
-              className="block aspect-[16/9] h-auto w-full rounded-2xl object-cover"
-            />
-          </a>
+            src={`${imageRoot}/${file}`}
+            alt={alt}
+            width={1920}
+            height={1080}
+            sizes="(max-width: 760px) calc(100vw - 56px), calc((100vw - 64px) / 2)"
+            className="block aspect-[16/9] h-auto w-full rounded-2xl object-cover"
+          />
         ))}
       </div>
     </article>
