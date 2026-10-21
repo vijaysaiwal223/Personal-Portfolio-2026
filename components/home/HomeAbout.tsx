@@ -5,7 +5,7 @@ const assetRoot = "/assets/figma-home/about";
 
 export default function HomeAbout() {
   return (
-    <section className="relative mx-auto w-full max-w-[1128px] py-[100px] max-[760px]:py-20" id="about" aria-labelledby="about-title">
+    <section className="relative mx-auto w-full max-w-[1128px] pt-[124px] pb-[100px] max-[760px]:pt-[104px] max-[760px]:pb-20" id="about" aria-labelledby="about-title">
       <div className="absolute inset-x-0 top-10 flex h-[54px] items-center max-[760px]:top-4">
         <span className="h-px w-16 shrink-0 bg-[#272729] max-[1128px]:w-[calc((100%-1000px)/2)] max-[1048px]:w-6" aria-hidden="true" />
         <div className="flex shrink-0 items-center gap-2 rounded-2xl border border-[#e9e9e9]/10 bg-[#19191b] p-[6px]">
