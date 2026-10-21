@@ -25,7 +25,7 @@ export default function HomeAbout() {
         <span className="h-px flex-1 bg-[#272729]" aria-hidden="true" />
       </div>
 
-      <div className="mx-auto flex min-h-[601px] w-full max-w-[1000px] items-start justify-center gap-8 border-x border-white/10 p-12 max-[900px]:flex-col max-[900px]:gap-8 max-[900px]:px-6 max-[900px]:pb-10 max-[900px]:min-h-0">
+      <div className="mx-auto flex min-h-[601px] w-full max-w-[1000px] items-start justify-center gap-8 p-12 max-[900px]:flex-col max-[900px]:gap-8 max-[900px]:px-6 max-[900px]:pb-10 max-[900px]:min-h-0">
         <h2 className="sr-only" id="about-title">About me</h2>
         <div className="flex min-w-0 flex-1 flex-col gap-4 text-[16px] leading-6 max-[600px]:text-[14px] max-[600px]:leading-[22px]">
           <p className="m-0 tracking-[-0.16px] text-white">
