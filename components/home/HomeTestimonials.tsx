@@ -80,7 +80,7 @@ export default function HomeTestimonials() {
           className="m-0 text-[32px] leading-10 font-medium tracking-[-1.3px] text-white max-[600px]:text-[28px] max-[600px]:leading-9"
           id="testimonials-title"
         >
-          What people are saying.
+          Words from people, I've worked with.
         </h2>
 
         <div className="mt-12 grid grid-cols-2 items-start gap-4 max-[900px]:grid-cols-1">

@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { links } from "@/lib/site";
+import HomePhotoGallery from "./HomePhotoGallery";
+import styles from "./HomeAbout.module.css";
 
 const assetRoot = "/assets/figma-home/about";
 
@@ -7,7 +9,7 @@ export default function HomeAbout() {
   return (
     <section className="relative mx-auto w-full max-w-[1128px] pt-[124px] pb-[100px] max-[760px]:pt-[104px] max-[760px]:pb-20" id="about" aria-labelledby="about-title">
       <div className="absolute inset-x-0 top-10 flex h-[54px] items-center max-[760px]:top-4">
-        <span className="h-px w-6 shrink-0 bg-[#272729]" aria-hidden="true" />
+        <span className="h-px w-16 shrink-0 bg-[#272729] max-[1128px]:w-[calc((100%-1000px)/2)] max-[1048px]:w-6" aria-hidden="true" />
         <div className="flex shrink-0 items-center gap-2 rounded-2xl border border-[#e9e9e9]/10 bg-[#19191b] p-[6px]">
           <Image
             className="size-10 rounded-[9px] border border-black/10 object-cover"
@@ -25,9 +27,9 @@ export default function HomeAbout() {
         <span className="h-px flex-1 bg-[#272729]" aria-hidden="true" />
       </div>
 
-      <div className="mx-auto flex w-full max-w-[1128px] items-start justify-center gap-8 px-6 max-[900px]:flex-col">
+      <div className="mx-auto grid w-full max-w-[1000px] grid-cols-2 items-start gap-8 max-[1048px]:px-6 max-[900px]:grid-cols-1">
         <h2 className="sr-only" id="about-title">About me</h2>
-        <div className="flex min-w-0 flex-1 flex-col gap-4 text-[16px] leading-6 max-[600px]:text-[14px] max-[600px]:leading-[22px]">
+        <div className="flex min-w-0 flex-col gap-4 text-[14px] leading-[22px]">
           <p className="m-0 tracking-[-0.16px] text-white">
             I’m Vijay, a product designer who makes complex SaaS products easier to understand and use. At Matchscope.pro, I’ve taken a career preparation platform from concept to launch, bringing product strategy, UX, visual design, and development together for more than 5,000 active users.
           </p>
@@ -41,17 +43,16 @@ export default function HomeAbout() {
             <a className="underline underline-offset-2 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white" href="/vijay-saiwal-resume.pdf" target="_blank" rel="noopener noreferrer">resume</a>.
           </p>
         </div>
-        <div className="relative h-[505px] w-[379px] shrink-0 max-[900px]:h-[170px] max-[900px]:w-full max-[900px]:max-w-[379px]" aria-hidden="true">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="absolute left-1/2 top-[116px] -translate-x-1/2" src={`${assetRoot}/shelf.svg?v=2`} alt="" />
-          <div className="absolute left-1/2 top-[6.5px] flex -translate-x-1/2 items-end gap-[6px]">
+        <div className="relative h-[340px] min-w-0 w-full max-[900px]:h-[170px]" aria-hidden="true">
+          <div className={styles.shelf} />
+          <div className="absolute left-1/2 top-[10px] flex -translate-x-1/2 items-end gap-[10px]">
             <Image src={`${assetRoot}/psycho-cybernetics.png`} alt="" width={621} height={1000} className="h-auto w-[68px] shrink-0" sizes="68px" />
             <Image src={`${assetRoot}/anxious-people.png`} alt="" width={652} height={1000} className="h-auto w-[68px] shrink-0" sizes="68px" />
             <Image src={`${assetRoot}/subtle-art.png`} alt="" width={1600} height={2401} className="h-auto w-[68px] shrink-0" sizes="68px" />
-            <Image src={`${assetRoot}/if-tomorrow-comes.png`} alt="" width={623} height={1000} className="h-auto w-[68px] shrink-0" sizes="68px" />
           </div>
         </div>
       </div>
+      <HomePhotoGallery />
     </section>
   );
 }
