@@ -5,7 +5,7 @@ const assetRoot = "/assets/figma-home/about";
 
 export default function HomeAbout() {
   return (
-    <section className="relative mx-auto w-full max-w-[1128px] pt-[100px] max-[760px]:pt-20" id="about" aria-labelledby="about-title">
+    <section className="relative mx-auto w-full max-w-[1128px] py-[100px] max-[760px]:py-20" id="about" aria-labelledby="about-title">
       <div className="absolute inset-x-0 top-10 flex h-[54px] items-center max-[760px]:top-4">
         <span className="h-px w-12 shrink-0 bg-[#272729] max-[600px]:w-6" aria-hidden="true" />
         <div className="flex shrink-0 items-center gap-2 rounded-2xl border border-[#e9e9e9]/10 bg-[#19191b] p-[6px]">
@@ -25,7 +25,7 @@ export default function HomeAbout() {
         <span className="h-px flex-1 bg-[#272729]" aria-hidden="true" />
       </div>
 
-      <div className="mx-auto flex min-h-[601px] w-full max-w-[1000px] items-start justify-center gap-8 p-12 max-[900px]:flex-col max-[900px]:gap-8 max-[900px]:px-6 max-[900px]:pb-10 max-[900px]:min-h-0">
+      <div className="mx-auto flex w-full max-w-[1000px] items-start justify-center gap-8 max-[1048px]:px-6 max-[900px]:flex-col">
         <h2 className="sr-only" id="about-title">About me</h2>
         <div className="flex min-w-0 flex-1 flex-col gap-4 text-[16px] leading-6 max-[600px]:text-[14px] max-[600px]:leading-[22px]">
           <p className="m-0 tracking-[-0.16px] text-white">
