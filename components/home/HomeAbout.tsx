@@ -29,7 +29,7 @@ export default function HomeAbout() {
 
       <div className="mx-auto grid w-full max-w-[1000px] grid-cols-2 items-start gap-8 max-[1048px]:px-6 max-[900px]:grid-cols-1">
         <h2 className="sr-only" id="about-title">About me</h2>
-        <div className="flex min-w-0 flex-col gap-4 text-[14px] leading-[22px]">
+        <div className="flex min-w-0 flex-col gap-4 text-[16px] leading-[22px]">
           <p className="m-0 tracking-[-0.16px] text-white">
             I’m Vijay, a product designer who makes complex SaaS products easier to understand and use. At Matchscope.pro, I’ve taken a career preparation platform from concept to launch, bringing product strategy, UX, visual design, and development together for more than 5,000 active users.
           </p>
