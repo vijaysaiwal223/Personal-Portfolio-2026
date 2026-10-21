@@ -43,7 +43,7 @@ export default function HomeAbout() {
         </div>
         <div className="relative h-[505px] w-[379px] shrink-0 max-[900px]:h-[170px] max-[900px]:w-full max-[900px]:max-w-[379px]" aria-hidden="true">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="absolute left-1/2 top-[116px] -translate-x-1/2" src={`${assetRoot}/shelf.svg`} alt="" />
+          <img className="absolute left-1/2 top-[116px] -translate-x-1/2" src={`${assetRoot}/shelf.svg?v=2`} alt="" />
           <div className="absolute left-1/2 top-[6.5px] flex -translate-x-1/2 items-end gap-[6px]">
             <Image src={`${assetRoot}/psycho-cybernetics.png`} alt="" width={621} height={1000} className="h-auto w-[68px] shrink-0" sizes="68px" />
             <Image src={`${assetRoot}/anxious-people.png`} alt="" width={652} height={1000} className="h-auto w-[68px] shrink-0" sizes="68px" />
