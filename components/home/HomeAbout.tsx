@@ -7,7 +7,7 @@ export default function HomeAbout() {
   return (
     <section className="relative mx-auto w-full max-w-[1128px] pt-[124px] pb-[100px] max-[760px]:pt-[104px] max-[760px]:pb-20" id="about" aria-labelledby="about-title">
       <div className="absolute inset-x-0 top-10 flex h-[54px] items-center max-[760px]:top-4">
-        <span className="h-px w-16 shrink-0 bg-[#272729] max-[1128px]:w-[calc((100%-1000px)/2)] max-[1048px]:w-6" aria-hidden="true" />
+        <span className="h-px w-6 shrink-0 bg-[#272729]" aria-hidden="true" />
         <div className="flex shrink-0 items-center gap-2 rounded-2xl border border-[#e9e9e9]/10 bg-[#19191b] p-[6px]">
           <Image
             className="size-10 rounded-[9px] border border-black/10 object-cover"
@@ -25,7 +25,7 @@ export default function HomeAbout() {
         <span className="h-px flex-1 bg-[#272729]" aria-hidden="true" />
       </div>
 
-      <div className="mx-auto flex w-full max-w-[1000px] items-start justify-center gap-8 max-[1048px]:px-6 max-[900px]:flex-col">
+      <div className="mx-auto flex w-full max-w-[1128px] items-start justify-center gap-8 px-6 max-[900px]:flex-col">
         <h2 className="sr-only" id="about-title">About me</h2>
         <div className="flex min-w-0 flex-1 flex-col gap-4 text-[16px] leading-6 max-[600px]:text-[14px] max-[600px]:leading-[22px]">
           <p className="m-0 tracking-[-0.16px] text-white">
