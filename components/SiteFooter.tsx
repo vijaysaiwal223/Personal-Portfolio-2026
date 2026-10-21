@@ -25,13 +25,21 @@ export default function SiteFooter() {
               <span className="text-[14px] leading-5 tracking-[-0.28px] text-[#737373]">Product Designer</span>
             </span>
           </Link>
-          <span
-            className="block h-10 w-[85.455px] shrink-0"
-            style={{ maskImage: 'url("/assets/figma-footer/badge-mask.svg")', maskRepeat: "no-repeat" }}
+          <a
+            className="block h-10 w-[85.455px] shrink-0 rounded-sm transition-opacity hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            href="https://www.wallofportfolios.in/portfolios/vijay-saiwal/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View Vijay Saiwal on Wall of Portfolios"
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className="block" src="/assets/figma-footer/badge.svg" alt="Featured on Wall of Portfolios" />
-          </span>
+            <span
+              className="block h-10 w-[85.455px]"
+              style={{ maskImage: 'url("/assets/figma-footer/badge-mask.svg")', maskRepeat: "no-repeat" }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img className="block" src="/assets/figma-footer/badge.svg" alt="" />
+            </span>
+          </a>
         </div>
         <div className="flex items-start justify-between gap-x-6 gap-y-4 text-[14px] leading-5 tracking-[-0.28px] max-[600px]:flex-wrap">
           <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
