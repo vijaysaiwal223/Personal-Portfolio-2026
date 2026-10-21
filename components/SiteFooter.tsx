@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { links } from "@/lib/site";
 import ActionLink from "@/components/ActionLink";
+import FooterVisitorCount from "@/components/FooterVisitorCount";
 
 const socialLinks = [
   { label: "LinkedIn", href: links.linkedIn },
@@ -25,7 +26,10 @@ export default function SiteFooter() {
           </div>
         </div>
         <div className="flex items-center justify-between gap-5 text-[14px] leading-5 tracking-[-0.28px] max-[600px]:flex-wrap">
-          <p className="m-0">© {new Date().getFullYear()} • Vijay Saiwal</p>
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+            <p className="m-0">© {new Date().getFullYear()} • Vijay Saiwal</p>
+            <FooterVisitorCount />
+          </div>
           <nav className="flex items-center gap-2" aria-label="Social links">
             {socialLinks.map(({ label, href }, index) => (
               <span className="flex items-center gap-2" key={label}>
