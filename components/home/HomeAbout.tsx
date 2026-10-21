@@ -42,11 +42,14 @@ export default function HomeAbout() {
           </p>
         </div>
         <div className="relative h-[505px] w-[379px] shrink-0 max-[900px]:h-[170px] max-[900px]:w-full max-[900px]:max-w-[379px]" aria-hidden="true">
-          {/* Figma places the book slightly left of center on the shelf. */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="absolute left-[38px] top-[84px] max-[900px]:left-1/2 max-[900px]:-translate-x-1/2" src={`${assetRoot}/shelf.svg`} alt="" />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="absolute left-[126px] top-[6.6px] max-[900px]:left-[calc(50%-30px)] max-[900px]:-translate-x-1/2" src={`${assetRoot}/book.svg`} alt="" />
+          <img className="absolute left-1/2 top-[116px] -translate-x-1/2" src={`${assetRoot}/shelf.svg`} alt="" />
+          <div className="absolute left-1/2 top-[6.5px] flex -translate-x-1/2 items-end gap-[6px]">
+            <Image src={`${assetRoot}/psycho-cybernetics.png`} alt="" width={621} height={1000} className="h-auto w-[68px] shrink-0" sizes="68px" />
+            <Image src={`${assetRoot}/anxious-people.png`} alt="" width={652} height={1000} className="h-auto w-[68px] shrink-0" sizes="68px" />
+            <Image src={`${assetRoot}/subtle-art.png`} alt="" width={1600} height={2401} className="h-auto w-[68px] shrink-0" sizes="68px" />
+            <Image src={`${assetRoot}/if-tomorrow-comes.png`} alt="" width={623} height={1000} className="h-auto w-[68px] shrink-0" sizes="68px" />
+          </div>
         </div>
       </div>
     </section>
