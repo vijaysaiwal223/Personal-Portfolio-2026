@@ -18,7 +18,9 @@ export async function GET(request: Request) {
   try {
     const apiHost = process.env.POSTHOG_API_HOST || "https://us.posthog.com";
     const endpoint = new URL(`/api/projects/${projectId}/query/`, apiHost);
-    const query = `SELECT count(DISTINCT distinct_id) FROM events WHERE event = '$pageview' AND properties.$host = '${siteHost}'`;
+    // Tracking began on this date. The timestamp filter keeps the HogQL query
+    // within PostHog's execution limit while still counting every site visit.
+    const query = `SELECT count(DISTINCT distinct_id) FROM events WHERE event = '$pageview' AND timestamp >= toDateTime('2026-10-21 00:00:00') AND properties.$host = '${siteHost}'`;
     const response = await fetch(endpoint, {
       method: "POST",
       headers: {
