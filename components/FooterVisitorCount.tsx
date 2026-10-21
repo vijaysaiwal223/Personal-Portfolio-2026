@@ -22,5 +22,7 @@ export default function FooterVisitorCount() {
 
   if (count === null) return null;
 
-  return <span aria-label={`${count.toLocaleString()} portfolio visitors`}>• {count.toLocaleString()} visitors</span>;
+  const label = `${count.toLocaleString()} ${count === 1 ? "visitor" : "visitors"}`;
+
+  return <span aria-label={`${label} to this portfolio`}>• {label}</span>;
 }
