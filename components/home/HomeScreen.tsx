@@ -4,6 +4,7 @@ import HomeIsland from "./HomeIsland";
 import HomeSelectedWork from "./HomeSelectedWork";
 import HomeTestimonials from "./HomeTestimonials";
 import HomeWebsiteBuilds from "./HomeWebsiteBuilds";
+import HomeAbout from "./HomeAbout";
 import HomeTimeLocation from "./HomeTimeLocation";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -20,6 +21,7 @@ export default function HomeScreen() {
             <HomeSelectedWork />
             <HomeTestimonials />
             <HomeWebsiteBuilds />
+            <HomeAbout />
           </div>
           <SiteFooter />
         </div>
