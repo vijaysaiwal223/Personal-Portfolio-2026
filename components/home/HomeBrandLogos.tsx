@@ -47,12 +47,12 @@ export default function HomeBrandLogos() {
   const [paused, setPaused] = useState(false);
 
   return (
-    <section className="home-brand-section relative z-10 mt-[85px] w-full max-[1048px]:px-6" aria-label="Brands we’ve worked with" data-paused={paused}>
+    <section className="home-brand-section relative z-10 mt-[85px] w-full max-[1048px]:px-6" aria-label="Brands I’ve worked with" data-paused={paused}>
       <div className="pointer-events-none absolute -top-[29px] left-0 w-full max-[1048px]:px-6" aria-hidden="true">
         <div className="h-px w-full bg-white/20" />
       </div>
       <div className="flex items-center justify-between gap-4">
-        <p className="m-0 text-[14px] leading-5 font-normal text-[#969696]">Brands we’ve worked with</p>
+        <p className="m-0 text-[14px] leading-5 font-normal text-[#969696]">Brands I’ve worked with</p>
         <button
           className="grid size-9 shrink-0 cursor-pointer place-items-center rounded-full border-0 bg-transparent p-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:hidden"
           type="button"

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: site.title,
     description: site.description,
     ...(siteUrl ? { url: "/" } : {}),
-    images: [{ url: site.cover, width: 1200, height: 630, alt: site.coverAlt }],
+    images: [{ url: site.cover, width: 1512, height: 850, alt: site.coverAlt }],
   },
   twitter: {
     card: "summary_large_image",

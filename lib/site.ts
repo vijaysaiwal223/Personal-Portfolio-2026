@@ -9,8 +9,8 @@ export const site = {
   name: "Vijay Saiwal",
   title: "Vijay Saiwal — Product Designer & Builder",
   description: "Product designer with 4+ years of SaaS experience, making complex workflows easier to understand through research, UX, and clear interfaces. Available for work.",
-  cover: "/assets/cover.png",
-  coverAlt: "Vijay Saiwal’s portfolio — product designer with 4+ years of SaaS experience, available for work.",
+  cover: "/assets/portfolio-social-cover.png",
+  coverAlt: "Your next big idea. Designed. Built. Shipped. Vijay Saiwal’s product design portfolio.",
 };
 
 export const links = {
