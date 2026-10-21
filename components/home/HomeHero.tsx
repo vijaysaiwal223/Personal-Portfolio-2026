@@ -66,11 +66,11 @@ export default function HomeHero() {
             Hey, I’m Vijay Saiwal 👋🏻 A product designer with 4+ years of SaaS experience. I bring research, workflows, and visual design together to make useful products easier to understand and use.
           </p>
           <div className="flex flex-wrap items-center gap-3" aria-label="Connect with Vijay">
-            <ActionLink variant="primary" href={links.bookCall} target="_blank" rel="noopener noreferrer">
-              Schedule an intro call
-            </ActionLink>
-            <ActionLink variant="secondary" href={links.linkedIn} target="_blank" rel="noopener noreferrer">
+            <ActionLink variant="primary" href={links.linkedIn} target="_blank" rel="noopener noreferrer">
               Connect on LinkedIn
+            </ActionLink>
+            <ActionLink variant="secondary" href="/vijay-saiwal-resume.pdf" target="_blank" rel="noopener noreferrer">
+              View resume
             </ActionLink>
           </div>
         </div>
