@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { links } from "@/lib/site";
 import FooterVisitorCount from "@/components/FooterVisitorCount";
+import BestPortfolioBadges from "@/components/BestPortfolioBadges";
 
 const socialLinks = [
   { label: "LinkedIn", href: links.linkedIn, icon: "/assets/figma-footer/linkedin.svg" },
@@ -13,7 +14,7 @@ export default function SiteFooter() {
   return (
     <footer className="bg-[#f1f1f1] px-6 py-10 text-black" aria-label="Contact and social links">
       <div className="mx-auto flex w-full max-w-[1000px] flex-col gap-6">
-        <div className="flex items-center justify-between gap-6 border-b border-black/10 pb-4">
+        <div className="flex items-center justify-between gap-6 border-b border-black/10 pb-4 max-[600px]:flex-wrap">
           <Link
             className="flex items-center gap-3 rounded-md no-underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
             href="/"
@@ -25,21 +26,24 @@ export default function SiteFooter() {
               <span className="text-[14px] leading-5 tracking-[-0.28px] text-[#737373]">Product Designer</span>
             </span>
           </Link>
-          <a
-            className="block h-10 w-[85.455px] shrink-0 rounded-sm transition-opacity hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-            href="https://www.wallofportfolios.in/portfolios/vijay-saiwal/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="View Vijay Saiwal on Wall of Portfolios"
-          >
-            <span
-              className="block h-10 w-[85.455px]"
-              style={{ maskImage: 'url("/assets/figma-footer/badge-mask.svg")', maskRepeat: "no-repeat" }}
+          <div className="flex shrink-0 items-center gap-2">
+            <a
+              className="block h-10 w-[85.455px] shrink-0 rounded-sm transition-opacity hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+              href="https://www.wallofportfolios.in/portfolios/vijay-saiwal/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View Vijay Saiwal on Wall of Portfolios"
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img className="block" src="/assets/figma-footer/badge.svg" alt="" />
-            </span>
-          </a>
+              <span
+                className="block h-10 w-[85.455px]"
+                style={{ maskImage: 'url("/assets/figma-footer/badge-mask.svg")', maskRepeat: "no-repeat" }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img className="block" src="/assets/figma-footer/badge.svg" alt="" />
+              </span>
+            </a>
+            <BestPortfolioBadges />
+          </div>
         </div>
         <div className="flex items-start justify-between gap-x-6 gap-y-4 text-[14px] leading-5 tracking-[-0.28px] max-[600px]:flex-wrap">
           <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
